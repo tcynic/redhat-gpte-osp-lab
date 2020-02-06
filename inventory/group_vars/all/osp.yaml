@@ -11,3 +11,85 @@ osp_images:
 - name: rhel-guest-image-7.2-20151102.0.x86_64
   disk_format: qcow2
   url: http://www.opentlc.com/download/osp_advanced_networking/rhel-guest-image-7.2-20151102.0.x86_64.qcow2
+
+osp_keypairs:
+- name: lab
+  path: ~/.ssh/lab-id_rsa
+
+osp_networks:
+# Private Network   
+- name: internal
+  subnet_name: internal
+  subnet_cidr: "172.16.1.0/24"
+
+# Public Facing Network   
+- name: public
+  subnet_name: public
+  subnet_cidr: "10.10.10.0/24"
+  external: true
+  routers:
+  - name: router
+    interfaces:
+    - internal
+
+
+# FIXME - What the heck are these?
+osp_default_host_routes:
+- destination: 0.0.0.0/0
+  nexthop: 10.10.10.0
+- destination: 192.168.0.0/24
+  nexthop: 192.168.0.0
+
+osp_security_groups:
+- name: apps
+  rules:
+  - port: 22
+  - port: 8080
+
+- name: appdbs
+  rules:
+  - port: 22
+  - port: 5432
+
+- name: frontends
+  rules:
+  - port: 22
+  - port: 80
+  - port: 443
+
+osp_instances:
+- name: app1
+  flavor: m2.small
+  image: rhel-guest-image-7.2-20151102.0.x86_64
+  meta: "group=apps,deployment_name=dev"
+  key_name: lab
+  network: internal
+  floating_ip_network: public
+  security_groups: apps
+
+- name: app2
+  flavor: m2.small
+  image: rhel-guest-image-7.2-20151102.0.x86_64
+  meta: "group=apps,deployment_name=dev"
+  key_name: lab
+  network: internal
+  floating_ip_network: public
+  security_groups: apps
+
+- name: db
+  flavor: m2.small
+  image: rhel-guest-image-7.2-20151102.0.x86_64
+  meta: "group=appdbs,deployment_name=dev"
+  key_name: lab
+  network: internal
+  floating_ip_network: public
+  security_groups: appdbs
+
+- name: frontend
+  flavor: m2.small
+  image: rhel-guest-image-7.2-20151102.0.x86_64
+  meta: "group=frontends,deployment_name=dev"
+  key_name: lab
+  network: internal
+  floating_ip_network: public
+  security_groups: frontends 
