@@ -1,0 +1,7 @@
+---
+osp_cloud: ospcloud
+
+osp_images:
+- name: rhel-guest-image-7.2-20151102.0.x86_64
+  disk_format: qcow2
+  url: http://www.opentlc.com/download/osp_advanced_networking/rhel-guest-image-7.2-20151102.0.x86_64.qcow2

@@ -1,0 +1,5 @@
+---
+- name: OpenStack Lab Setup
+  hosts: localhost
+  roles:
+  - osp_image
