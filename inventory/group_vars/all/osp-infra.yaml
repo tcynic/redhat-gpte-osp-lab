@@ -1,6 +1,4 @@
 ---
-osp_cloud: ospcloud
-
 osp_flavors:
 - name: m2.small
   ram: 2048
@@ -14,7 +12,7 @@ osp_images:
 
 osp_keypairs:
 - name: lab
-  path: ~/.ssh/lab-id_rsa
+  path: "{{ ansible_ssh_private_key_file }}"
 
 osp_networks:
 # Private Network   
@@ -33,10 +31,10 @@ osp_networks:
   subnet_cidr: "10.10.10.0/24"
   external: true
   host_routes:
-     - destination: 0.0.0.0/0
-       nexthop: 10.10.10.0
-     - destination: 192.168.0.0/24
-       nexthop: 192.168.0.0
+  - destination: 0.0.0.0/0
+    nexthop: 10.10.10.0
+  - destination: 192.168.0.0/24
+    nexthop: 192.168.0.0
   routers:
   - name: router20
     interfaces:

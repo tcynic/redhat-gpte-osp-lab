@@ -6,5 +6,4 @@
     network: "{{ osp_network.name }}"
     external_fixed_ips:
     - subnet: "{{ osp_network.name }}"
-    interfaces:
-    - internal20
+    interfaces: "{{ osp_network_router.interfaces }}"

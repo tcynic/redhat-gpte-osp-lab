@@ -1,5 +1,5 @@
 ---
-- name: OpenStack Lab Setup
+- name: OpenStack Lab Infrastructure Setup
   hosts: localhost
   roles:
   - osp_image
@@ -7,4 +7,3 @@
   - osp_keypair
   - osp_network
   - osp_security_group
-  - osp_instance
