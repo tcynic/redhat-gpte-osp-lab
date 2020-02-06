@@ -1,6 +1,12 @@
 ---
 osp_cloud: ospcloud
 
+osp_flavors:
+- name: m2.small
+  ram: 2048
+  vcpus: 1
+  disk: 10
+
 osp_images:
 - name: rhel-guest-image-7.2-20151102.0.x86_64
   disk_format: qcow2

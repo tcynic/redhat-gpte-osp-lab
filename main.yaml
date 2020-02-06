@@ -3,3 +3,4 @@
   hosts: localhost
   roles:
   - osp_image
+  - osp_flavor
