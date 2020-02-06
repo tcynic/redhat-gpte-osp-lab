@@ -8,7 +8,6 @@
     flavor: "{{ osp_instance.flavor }}"
     security_groups: "{{ osp_instance.security_groups }}"
     key_name: "{{ osp_instance.key_name }}"
-    wait: yes
     nics:
     - net-name: "{{ osp_instance.network }}"
     # FIXME - This is messy

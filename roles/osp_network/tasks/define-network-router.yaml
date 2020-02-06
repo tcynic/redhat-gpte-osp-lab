@@ -7,4 +7,4 @@
     external_fixed_ips:
     - subnet: "{{ osp_network.name }}"
     interfaces:
-    - internal
+    - internal20

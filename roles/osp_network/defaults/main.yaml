@@ -4,5 +4,3 @@ osp_networks: []
 osp_default_dns_nameservers:
 - 8.8.8.8
 - 8.8.4.4
-
-osp_default_host_routes: []

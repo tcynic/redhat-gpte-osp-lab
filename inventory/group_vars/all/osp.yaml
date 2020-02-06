@@ -18,27 +18,29 @@ osp_keypairs:
 
 osp_networks:
 # Private Network   
-- name: internal
-  subnet_name: internal
-  subnet_cidr: "172.16.1.0/24"
+- name: internal20
+  subnet_name: internal20
+  subnet_cidr: "20.20.20.0/24"
+  host_routes:
+  - destination: 0.0.0.0/0
+    nexthop: 192.168.0.0
+  - destination: 192.168.0.0/24
+    nexthop: 192.168.0.0
 
 # Public Facing Network   
 - name: public
   subnet_name: public
   subnet_cidr: "10.10.10.0/24"
   external: true
+  host_routes:
+     - destination: 0.0.0.0/0
+       nexthop: 10.10.10.0
+     - destination: 192.168.0.0/24
+       nexthop: 192.168.0.0
   routers:
-  - name: router
+  - name: router20
     interfaces:
-    - internal
-
-
-# FIXME - What the heck are these?
-osp_default_host_routes:
-- destination: 0.0.0.0/0
-  nexthop: 10.10.10.0
-- destination: 192.168.0.0/24
-  nexthop: 192.168.0.0
+    - internal20
 
 osp_security_groups:
 - name: apps
@@ -63,7 +65,7 @@ osp_instances:
   image: rhel-guest-image-7.2-20151102.0.x86_64
   meta: "group=apps,deployment_name=dev"
   key_name: lab
-  network: internal
+  network: internal20
   floating_ip_network: public
   security_groups: apps
 
@@ -72,7 +74,7 @@ osp_instances:
   image: rhel-guest-image-7.2-20151102.0.x86_64
   meta: "group=apps,deployment_name=dev"
   key_name: lab
-  network: internal
+  network: internal20
   floating_ip_network: public
   security_groups: apps
 
@@ -81,7 +83,7 @@ osp_instances:
   image: rhel-guest-image-7.2-20151102.0.x86_64
   meta: "group=appdbs,deployment_name=dev"
   key_name: lab
-  network: internal
+  network: internal20
   floating_ip_network: public
   security_groups: appdbs
 
@@ -90,6 +92,6 @@ osp_instances:
   image: rhel-guest-image-7.2-20151102.0.x86_64
   meta: "group=frontends,deployment_name=dev"
   key_name: lab
-  network: internal
+  network: internal20
   floating_ip_network: public
   security_groups: frontends 
