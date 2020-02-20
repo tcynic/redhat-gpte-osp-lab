@@ -18,23 +18,13 @@ osp_networks:
 # Private Network   
 - name: internal20
   subnet_name: internal20
-  subnet_cidr: "20.20.20.0/24"
-  host_routes:
-  - destination: 0.0.0.0/0
-    nexthop: 192.168.0.0
-  - destination: 192.168.0.0/24
-    nexthop: 192.168.0.0
+  subnet_cidr: "10.10.20.0/24"
 
 # Public Facing Network   
 - name: public
   subnet_name: public
   subnet_cidr: "10.10.10.0/24"
   external: true
-  host_routes:
-  - destination: 0.0.0.0/0
-    nexthop: 10.10.10.0
-  - destination: 192.168.0.0/24
-    nexthop: 192.168.0.0
   routers:
   - name: router20
     interfaces:

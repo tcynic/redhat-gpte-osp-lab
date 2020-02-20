@@ -13,7 +13,7 @@
     name: "{{ osp_network.name }}"
     cidr: "{{ osp_network.subnet_cidr }}"
     dns_nameservers: "{{ osp_network.dns_nameservers | default(osp_default_dns_nameservers) }}"
-    host_routes: "{{ osp_network.host_routes }}"
+    host_routes: "{{ osp_network.host_routes | default([]) }}"
 
 - name: Define routers for {{ osp_network.name }}
   include_tasks: define-network-router.yaml
