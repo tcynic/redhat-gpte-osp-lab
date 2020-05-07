@@ -1,0 +1,652 @@
+all:
+  children:
+    RegionOne:
+      hosts:
+        app1:
+          ansible_host: 10.10.10.8
+          ansible_ssh_host: 10.10.10.8
+          openstack:
+            OS-DCF:diskConfig: MANUAL
+            OS-EXT-AZ:availability_zone: nova
+            OS-EXT-SRV-ATTR:host: comp01.example.com
+            OS-EXT-SRV-ATTR:hostname: app1
+            OS-EXT-SRV-ATTR:hypervisor_hostname: comp01.example.com
+            OS-EXT-SRV-ATTR:instance_name: instance-00000001
+            OS-EXT-SRV-ATTR:kernel_id: ''
+            OS-EXT-SRV-ATTR:launch_index: 0
+            OS-EXT-SRV-ATTR:ramdisk_id: ''
+            OS-EXT-SRV-ATTR:reservation_id: r-mk9c8mt4
+            OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+            OS-EXT-SRV-ATTR:user_data: null
+            OS-EXT-STS:power_state: 1
+            OS-EXT-STS:task_state: null
+            OS-EXT-STS:vm_state: active
+            OS-SCH-HNT:scheduler_hints: null
+            OS-SRV-USG:launched_at: '2020-05-06T19:20:07.000000'
+            OS-SRV-USG:terminated_at: null
+            accessIPv4: 10.10.10.8
+            accessIPv6: ''
+            addresses:
+              internal20:
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:47:fc:8b
+                OS-EXT-IPS:type: fixed
+                addr: 10.10.20.6
+                version: 4
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:47:fc:8b
+                OS-EXT-IPS:type: floating
+                addr: 10.10.10.8
+                version: 4
+            adminPass: null
+            az: nova
+            block_device_mapping: null
+            cloud: ospcloud
+            config_drive: ''
+            created: '2020-05-06T19:19:06Z'
+            created_at: '2020-05-06T19:19:06Z'
+            description: app1
+            disk_config: MANUAL
+            flavor:
+              id: d01a200e-b187-4992-8642-bef2b78eaff8
+            has_config_drive: false
+            host: comp01.example.com
+            hostId: b3aa7068069c188c8861a9add78f3de5e78d5181e211b8018415dd80
+            host_id: b3aa7068069c188c8861a9add78f3de5e78d5181e211b8018415dd80
+            host_status: UP
+            hostname: app1
+            hypervisor_hostname: comp01.example.com
+            id: 85865709-3705-4f31-ab24-cf49f1572536
+            image:
+              id: ed7a450f-69f7-4add-9e42-a2bf50e4ad96
+            instance_name: instance-00000001
+            interface_ip: 10.10.10.8
+            kernel_id: ''
+            key_name: lab
+            launch_index: 0
+            launched_at: '2020-05-06T19:20:07.000000'
+            location:
+              cloud: ospcloud
+              project:
+                domain_id: null
+                domain_name: default
+                id: 1e3aa106a2f94e93bb328f6bebe8b965
+                name: admin
+              region_name: RegionOne
+              zone: nova
+            locked: false
+            metadata:
+              deployment_name: dev
+              group: apps
+            name: app1
+            networks: {}
+            os-extended-volumes:volumes_attached: &id001 []
+            personality: null
+            power_state: 1
+            private_v4: 10.10.20.6
+            progress: 0
+            project_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            properties:
+              OS-DCF:diskConfig: MANUAL
+              OS-EXT-AZ:availability_zone: nova
+              OS-EXT-SRV-ATTR:host: comp01.example.com
+              OS-EXT-SRV-ATTR:hostname: app1
+              OS-EXT-SRV-ATTR:hypervisor_hostname: comp01.example.com
+              OS-EXT-SRV-ATTR:instance_name: instance-00000001
+              OS-EXT-SRV-ATTR:kernel_id: ''
+              OS-EXT-SRV-ATTR:launch_index: 0
+              OS-EXT-SRV-ATTR:ramdisk_id: ''
+              OS-EXT-SRV-ATTR:reservation_id: r-mk9c8mt4
+              OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+              OS-EXT-SRV-ATTR:user_data: null
+              OS-EXT-STS:power_state: 1
+              OS-EXT-STS:task_state: null
+              OS-EXT-STS:vm_state: active
+              OS-SCH-HNT:scheduler_hints: null
+              OS-SRV-USG:launched_at: '2020-05-06T19:20:07.000000'
+              OS-SRV-USG:terminated_at: null
+              host_status: UP
+              locked: false
+              os-extended-volumes:volumes_attached: *id001
+              trusted_image_certificates: null
+            public_v4: 10.10.10.8
+            public_v6: ''
+            ramdisk_id: ''
+            region: RegionOne
+            reservation_id: r-mk9c8mt4
+            root_device_name: /dev/vda
+            scheduler_hints: null
+            security_groups:
+            - name: apps
+            server_groups: null
+            status: ACTIVE
+            tags: []
+            task_state: null
+            tenant_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            terminated_at: null
+            trusted_image_certificates: null
+            updated: '2020-05-07T13:37:07Z'
+            user_data: null
+            user_id: 97656d07875c40b38805582946989e49
+            vm_state: active
+            volumes: []
+        app2:
+          ansible_host: 10.10.10.12
+          ansible_ssh_host: 10.10.10.12
+          openstack:
+            OS-DCF:diskConfig: MANUAL
+            OS-EXT-AZ:availability_zone: nova
+            OS-EXT-SRV-ATTR:host: comp00.example.com
+            OS-EXT-SRV-ATTR:hostname: app2
+            OS-EXT-SRV-ATTR:hypervisor_hostname: comp00.example.com
+            OS-EXT-SRV-ATTR:instance_name: instance-00000002
+            OS-EXT-SRV-ATTR:kernel_id: ''
+            OS-EXT-SRV-ATTR:launch_index: 0
+            OS-EXT-SRV-ATTR:ramdisk_id: ''
+            OS-EXT-SRV-ATTR:reservation_id: r-isjttzzc
+            OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+            OS-EXT-SRV-ATTR:user_data: null
+            OS-EXT-STS:power_state: 1
+            OS-EXT-STS:task_state: null
+            OS-EXT-STS:vm_state: active
+            OS-SCH-HNT:scheduler_hints: null
+            OS-SRV-USG:launched_at: '2020-05-06T19:21:13.000000'
+            OS-SRV-USG:terminated_at: null
+            accessIPv4: 10.10.10.12
+            accessIPv6: ''
+            addresses:
+              internal20:
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:68:8e:06
+                OS-EXT-IPS:type: fixed
+                addr: 10.10.20.12
+                version: 4
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:68:8e:06
+                OS-EXT-IPS:type: floating
+                addr: 10.10.10.12
+                version: 4
+            adminPass: null
+            az: nova
+            block_device_mapping: null
+            cloud: ospcloud
+            config_drive: ''
+            created: '2020-05-06T19:20:14Z'
+            created_at: '2020-05-06T19:20:14Z'
+            description: app2
+            disk_config: MANUAL
+            flavor:
+              id: d01a200e-b187-4992-8642-bef2b78eaff8
+            has_config_drive: false
+            host: comp00.example.com
+            hostId: 59b9f8bf3d22d1ecfa16e52e12ed870bad9a96c86298184f00241e5a
+            host_id: 59b9f8bf3d22d1ecfa16e52e12ed870bad9a96c86298184f00241e5a
+            host_status: UP
+            hostname: app2
+            hypervisor_hostname: comp00.example.com
+            id: 47b905a6-343e-4d00-84ab-705fa9700103
+            image:
+              id: ed7a450f-69f7-4add-9e42-a2bf50e4ad96
+            instance_name: instance-00000002
+            interface_ip: 10.10.10.12
+            kernel_id: ''
+            key_name: lab
+            launch_index: 0
+            launched_at: '2020-05-06T19:21:13.000000'
+            location:
+              cloud: ospcloud
+              project:
+                domain_id: null
+                domain_name: default
+                id: 1e3aa106a2f94e93bb328f6bebe8b965
+                name: admin
+              region_name: RegionOne
+              zone: nova
+            locked: false
+            metadata:
+              deployment_name: dev
+              group: apps
+            name: app2
+            networks: {}
+            os-extended-volumes:volumes_attached: &id002 []
+            personality: null
+            power_state: 1
+            private_v4: 10.10.20.12
+            progress: 0
+            project_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            properties:
+              OS-DCF:diskConfig: MANUAL
+              OS-EXT-AZ:availability_zone: nova
+              OS-EXT-SRV-ATTR:host: comp00.example.com
+              OS-EXT-SRV-ATTR:hostname: app2
+              OS-EXT-SRV-ATTR:hypervisor_hostname: comp00.example.com
+              OS-EXT-SRV-ATTR:instance_name: instance-00000002
+              OS-EXT-SRV-ATTR:kernel_id: ''
+              OS-EXT-SRV-ATTR:launch_index: 0
+              OS-EXT-SRV-ATTR:ramdisk_id: ''
+              OS-EXT-SRV-ATTR:reservation_id: r-isjttzzc
+              OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+              OS-EXT-SRV-ATTR:user_data: null
+              OS-EXT-STS:power_state: 1
+              OS-EXT-STS:task_state: null
+              OS-EXT-STS:vm_state: active
+              OS-SCH-HNT:scheduler_hints: null
+              OS-SRV-USG:launched_at: '2020-05-06T19:21:13.000000'
+              OS-SRV-USG:terminated_at: null
+              host_status: UP
+              locked: false
+              os-extended-volumes:volumes_attached: *id002
+              trusted_image_certificates: null
+            public_v4: 10.10.10.12
+            public_v6: ''
+            ramdisk_id: ''
+            region: RegionOne
+            reservation_id: r-isjttzzc
+            root_device_name: /dev/vda
+            scheduler_hints: null
+            security_groups:
+            - name: apps
+            server_groups: null
+            status: ACTIVE
+            tags: []
+            task_state: null
+            tenant_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            terminated_at: null
+            trusted_image_certificates: null
+            updated: '2020-05-07T13:37:10Z'
+            user_data: null
+            user_id: 97656d07875c40b38805582946989e49
+            vm_state: active
+            volumes: []
+        db:
+          ansible_host: 10.10.10.5
+          ansible_ssh_host: 10.10.10.5
+          openstack:
+            OS-DCF:diskConfig: MANUAL
+            OS-EXT-AZ:availability_zone: nova
+            OS-EXT-SRV-ATTR:host: comp01.example.com
+            OS-EXT-SRV-ATTR:hostname: db
+            OS-EXT-SRV-ATTR:hypervisor_hostname: comp01.example.com
+            OS-EXT-SRV-ATTR:instance_name: instance-00000003
+            OS-EXT-SRV-ATTR:kernel_id: ''
+            OS-EXT-SRV-ATTR:launch_index: 0
+            OS-EXT-SRV-ATTR:ramdisk_id: ''
+            OS-EXT-SRV-ATTR:reservation_id: r-d40iw12l
+            OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+            OS-EXT-SRV-ATTR:user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+            OS-EXT-STS:power_state: 1
+            OS-EXT-STS:task_state: null
+            OS-EXT-STS:vm_state: active
+            OS-SCH-HNT:scheduler_hints: null
+            OS-SRV-USG:launched_at: '2020-05-06T19:25:37.000000'
+            OS-SRV-USG:terminated_at: null
+            accessIPv4: 10.10.10.5
+            accessIPv6: ''
+            addresses:
+              internal20:
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:e7:5f:37
+                OS-EXT-IPS:type: fixed
+                addr: 10.10.20.13
+                version: 4
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:e7:5f:37
+                OS-EXT-IPS:type: floating
+                addr: 10.10.10.5
+                version: 4
+            adminPass: null
+            az: nova
+            block_device_mapping: null
+            cloud: ospcloud
+            config_drive: ''
+            created: '2020-05-06T19:25:12Z'
+            created_at: '2020-05-06T19:25:12Z'
+            description: db
+            disk_config: MANUAL
+            flavor:
+              id: d01a200e-b187-4992-8642-bef2b78eaff8
+            has_config_drive: false
+            host: comp01.example.com
+            hostId: b3aa7068069c188c8861a9add78f3de5e78d5181e211b8018415dd80
+            host_id: b3aa7068069c188c8861a9add78f3de5e78d5181e211b8018415dd80
+            host_status: UP
+            hostname: db
+            hypervisor_hostname: comp01.example.com
+            id: 269a3813-70f7-4f6f-85aa-845c42164096
+            image:
+              id: ceb73ab0-4b5b-44bc-8ae5-d5282883ccaf
+            instance_name: instance-00000003
+            interface_ip: 10.10.10.5
+            kernel_id: ''
+            key_name: lab
+            launch_index: 0
+            launched_at: '2020-05-06T19:25:37.000000'
+            location:
+              cloud: ospcloud
+              project:
+                domain_id: null
+                domain_name: default
+                id: 1e3aa106a2f94e93bb328f6bebe8b965
+                name: admin
+              region_name: RegionOne
+              zone: nova
+            locked: false
+            metadata:
+              deployment_name: dev
+              group: appdbs
+            name: db
+            networks: {}
+            os-extended-volumes:volumes_attached: &id003 []
+            personality: null
+            power_state: 1
+            private_v4: 10.10.20.13
+            progress: 0
+            project_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            properties:
+              OS-DCF:diskConfig: MANUAL
+              OS-EXT-AZ:availability_zone: nova
+              OS-EXT-SRV-ATTR:host: comp01.example.com
+              OS-EXT-SRV-ATTR:hostname: db
+              OS-EXT-SRV-ATTR:hypervisor_hostname: comp01.example.com
+              OS-EXT-SRV-ATTR:instance_name: instance-00000003
+              OS-EXT-SRV-ATTR:kernel_id: ''
+              OS-EXT-SRV-ATTR:launch_index: 0
+              OS-EXT-SRV-ATTR:ramdisk_id: ''
+              OS-EXT-SRV-ATTR:reservation_id: r-d40iw12l
+              OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+              OS-EXT-SRV-ATTR:user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+              OS-EXT-STS:power_state: 1
+              OS-EXT-STS:task_state: null
+              OS-EXT-STS:vm_state: active
+              OS-SCH-HNT:scheduler_hints: null
+              OS-SRV-USG:launched_at: '2020-05-06T19:25:37.000000'
+              OS-SRV-USG:terminated_at: null
+              host_status: UP
+              locked: false
+              os-extended-volumes:volumes_attached: *id003
+              trusted_image_certificates: null
+            public_v4: 10.10.10.5
+            public_v6: ''
+            ramdisk_id: ''
+            region: RegionOne
+            reservation_id: r-d40iw12l
+            root_device_name: /dev/vda
+            scheduler_hints: null
+            security_groups:
+            - name: appdbs
+            server_groups: null
+            status: ACTIVE
+            tags: []
+            task_state: null
+            tenant_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            terminated_at: null
+            trusted_image_certificates: null
+            updated: '2020-05-07T13:37:03Z'
+            user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+            user_id: 97656d07875c40b38805582946989e49
+            vm_state: active
+            volumes: []
+        frontend:
+          ansible_host: 10.10.10.11
+          ansible_ssh_host: 10.10.10.11
+          openstack:
+            OS-DCF:diskConfig: MANUAL
+            OS-EXT-AZ:availability_zone: nova
+            OS-EXT-SRV-ATTR:host: comp00.example.com
+            OS-EXT-SRV-ATTR:hostname: frontend
+            OS-EXT-SRV-ATTR:hypervisor_hostname: comp00.example.com
+            OS-EXT-SRV-ATTR:instance_name: instance-00000004
+            OS-EXT-SRV-ATTR:kernel_id: ''
+            OS-EXT-SRV-ATTR:launch_index: 0
+            OS-EXT-SRV-ATTR:ramdisk_id: ''
+            OS-EXT-SRV-ATTR:reservation_id: r-4drxne65
+            OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+            OS-EXT-SRV-ATTR:user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+            OS-EXT-STS:power_state: 1
+            OS-EXT-STS:task_state: null
+            OS-EXT-STS:vm_state: active
+            OS-SCH-HNT:scheduler_hints: null
+            OS-SRV-USG:launched_at: '2020-05-06T19:29:57.000000'
+            OS-SRV-USG:terminated_at: null
+            accessIPv4: 10.10.10.11
+            accessIPv6: ''
+            addresses:
+              internal20:
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:36:f2:2b
+                OS-EXT-IPS:type: fixed
+                addr: 10.10.20.10
+                version: 4
+              - OS-EXT-IPS-MAC:mac_addr: fa:16:3e:36:f2:2b
+                OS-EXT-IPS:type: floating
+                addr: 10.10.10.11
+                version: 4
+            adminPass: null
+            az: nova
+            block_device_mapping: null
+            cloud: ospcloud
+            config_drive: ''
+            created: '2020-05-06T19:29:32Z'
+            created_at: '2020-05-06T19:29:32Z'
+            description: frontend
+            disk_config: MANUAL
+            flavor:
+              id: d01a200e-b187-4992-8642-bef2b78eaff8
+            has_config_drive: false
+            host: comp00.example.com
+            hostId: 59b9f8bf3d22d1ecfa16e52e12ed870bad9a96c86298184f00241e5a
+            host_id: 59b9f8bf3d22d1ecfa16e52e12ed870bad9a96c86298184f00241e5a
+            host_status: UP
+            hostname: frontend
+            hypervisor_hostname: comp00.example.com
+            id: 99b0aa0e-2a47-44d1-a4f0-9cdf77a12283
+            image:
+              id: ceb73ab0-4b5b-44bc-8ae5-d5282883ccaf
+            instance_name: instance-00000004
+            interface_ip: 10.10.10.11
+            kernel_id: ''
+            key_name: lab
+            launch_index: 0
+            launched_at: '2020-05-06T19:29:57.000000'
+            location:
+              cloud: ospcloud
+              project:
+                domain_id: null
+                domain_name: default
+                id: 1e3aa106a2f94e93bb328f6bebe8b965
+                name: admin
+              region_name: RegionOne
+              zone: nova
+            locked: false
+            metadata:
+              deployment_name: dev
+              group: frontends
+            name: frontend
+            networks: {}
+            os-extended-volumes:volumes_attached: &id004 []
+            personality: null
+            power_state: 1
+            private_v4: 10.10.20.10
+            progress: 0
+            project_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            properties:
+              OS-DCF:diskConfig: MANUAL
+              OS-EXT-AZ:availability_zone: nova
+              OS-EXT-SRV-ATTR:host: comp00.example.com
+              OS-EXT-SRV-ATTR:hostname: frontend
+              OS-EXT-SRV-ATTR:hypervisor_hostname: comp00.example.com
+              OS-EXT-SRV-ATTR:instance_name: instance-00000004
+              OS-EXT-SRV-ATTR:kernel_id: ''
+              OS-EXT-SRV-ATTR:launch_index: 0
+              OS-EXT-SRV-ATTR:ramdisk_id: ''
+              OS-EXT-SRV-ATTR:reservation_id: r-4drxne65
+              OS-EXT-SRV-ATTR:root_device_name: /dev/vda
+              OS-EXT-SRV-ATTR:user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+              OS-EXT-STS:power_state: 1
+              OS-EXT-STS:task_state: null
+              OS-EXT-STS:vm_state: active
+              OS-SCH-HNT:scheduler_hints: null
+              OS-SRV-USG:launched_at: '2020-05-06T19:29:57.000000'
+              OS-SRV-USG:terminated_at: null
+              host_status: UP
+              locked: false
+              os-extended-volumes:volumes_attached: *id004
+              trusted_image_certificates: null
+            public_v4: 10.10.10.11
+            public_v6: ''
+            ramdisk_id: ''
+            region: RegionOne
+            reservation_id: r-4drxne65
+            root_device_name: /dev/vda
+            scheduler_hints: null
+            security_groups:
+            - name: frontends
+            server_groups: null
+            status: ACTIVE
+            tags: []
+            task_state: null
+            tenant_id: 1e3aa106a2f94e93bb328f6bebe8b965
+            terminated_at: null
+            trusted_image_certificates: null
+            updated: '2020-05-07T13:37:20Z'
+            user_data: IyEvYmluL2Jhc2gKY3VybCAtbyAvdG1wL29wZW5zdGFjay5wdWIgaHR0cDovL3d3dy5vcGVudGxjLmNvbS9kb3dubG9hZC9hbnNpYmxlX2Jvb3RjYW1wL29wZW5zdGFja19rZXlzL29wZW5zdGFjay5wdWIKY2F0IC90bXAvb3BlbnN0YWNrLnB1YiA+PiAvaG9tZS9jbG91ZC11c2VyLy5zc2gvYXV0aG9yaXplZF9rZXlzCmN1cmwgLW8gL3RtcC9pbnRlcm5hbC5yZXBvIGh0dHA6Ly93d3cub3BlbnRsYy5jb20vZG93bmxvYWQvYW5zaWJsZV9ib290Y2FtcC9yZXBvL2ludGVybmFsLnJlcG8KY3AgL3RtcC9pbnRlcm5hbC5yZXBvIC9ldGMveXVtLnJlcG9zLmQvaW50ZXJuYWwucmVwbwo=
+            user_id: 97656d07875c40b38805582946989e49
+            vm_state: active
+            volumes: []
+    RegionOne_nova:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    appdbs:
+      hosts:
+        db: {}
+    apps:
+      hosts:
+        app1: {}
+        app2: {}
+    frontends:
+      hosts:
+        frontend: {}
+    instance-269a3813-70f7-4f6f-85aa-845c42164096:
+      hosts:
+        db: {}
+    instance-47b905a6-343e-4d00-84ab-705fa9700103:
+      hosts:
+        app2: {}
+    instance-85865709-3705-4f31-ab24-cf49f1572536:
+      hosts:
+        app1: {}
+    instance-99b0aa0e-2a47-44d1-a4f0-9cdf77a12283:
+      hosts:
+        frontend: {}
+    meta-deployment_name_dev:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    meta-group_appdbs:
+      hosts:
+        db: {}
+    meta-group_apps:
+      hosts:
+        app1: {}
+        app2: {}
+    meta-group_frontends:
+      hosts:
+        frontend: {}
+    nova:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    ospcloud:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    ospcloud_RegionOne:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    ospcloud_RegionOne_nova:
+      hosts:
+        app1: {}
+        app2: {}
+        db: {}
+        frontend: {}
+    ungrouped: {}
+  vars:
+    ansible_ssh_private_key_file: ~/.ssh/lab-id_rsa
+    ansible_user: cloud-user
+    osp_cloud: ospcloud
+    osp_flavors:
+    - disk: 10
+      name: m2.small
+      ram: 2048
+      vcpus: 1
+    osp_images:
+    - disk_format: qcow2
+      name: rhel-guest-image-7.2-20151102.0.x86_64
+      url: http://www.opentlc.com/download/osp_advanced_networking/rhel-guest-image-7.2-20151102.0.x86_64.qcow2
+    osp_instances:
+    - flavor: m2.small
+      floating_ip_network: public
+      image: rhel-guest-image-7.2-20151102.0.x86_64
+      key_name: lab
+      meta: group=apps,deployment_name=dev
+      name: app1
+      network: internal20
+      security_groups: apps
+    - flavor: m2.small
+      floating_ip_network: public
+      image: rhel-guest-image-7.2-20151102.0.x86_64
+      key_name: lab
+      meta: group=apps,deployment_name=dev
+      name: app2
+      network: internal20
+      security_groups: apps
+    - flavor: m2.small
+      floating_ip_network: public
+      image: rhel-guest-image-7.2-20151102.0.x86_64
+      key_name: lab
+      meta: group=appdbs,deployment_name=dev
+      name: db
+      network: internal20
+      security_groups: appdbs
+    - flavor: m2.small
+      floating_ip_network: public
+      image: rhel-guest-image-7.2-20151102.0.x86_64
+      key_name: lab
+      meta: group=frontends,deployment_name=dev
+      name: frontend
+      network: internal20
+      security_groups: frontends
+    osp_keypairs:
+    - name: lab
+      path: '{{ ansible_ssh_private_key_file }}'
+    osp_networks:
+    - name: internal20
+      subnet_cidr: 10.10.20.0/24
+      subnet_name: internal20
+    - external: true
+      name: public
+      routers:
+      - interfaces:
+        - internal20
+        name: router20
+      subnet_cidr: 10.10.10.0/24
+      subnet_name: public
+    osp_security_groups:
+    - name: apps
+      rules:
+      - port: 22
+      - port: 8080
+    - name: appdbs
+      rules:
+      - port: 22
+      - port: 5432
+    - name: frontends
+      rules:
+      - port: 22
+      - port: 80
+      - port: 443
